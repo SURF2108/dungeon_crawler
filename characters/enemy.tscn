@@ -1,5 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://de468d3fawe1g"]
 
+[ext_resource type="PackedScene" uid="uid://bfx2fmlnvg0wa" path="res://assets/eye.fbx" id="1_nhupr"]
+[ext_resource type="AudioStream" uid="uid://erqo6s53hku7" path="res://assets/Audio&Sounds/cave-monster.mp3" id="1_wa0eo"]
+
 [sub_resource type="GDScript" id="GDScript_dbwbs"]
 script/source = "extends CharacterBody3D
 
@@ -10,6 +13,7 @@ var player: CharacterBody3D = null
 #var playerDetected = false
 
 func _ready() -> void:
+	
 	player = get_tree().get_nodes_in_group(\"player\")[0]
 
 const SPEED = 5.0
@@ -30,11 +34,6 @@ func _physics_process(delta: float) -> void:
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dbwbs"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wa0eo"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhupr"]
-albedo_color = Color(1, 0, 0, 1)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_dbwbs"]
 
 [node name="Enemy" type="CharacterBody3D"]
@@ -45,9 +44,10 @@ script = SubResource("GDScript_dbwbs")
 shape = SubResource("CapsuleShape3D_dbwbs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_wa0eo")
 skeleton = NodePath("../CollisionShape3D")
-surface_material_override/0 = SubResource("StandardMaterial3D_nhupr")
+
+[node name="eye" parent="MeshInstance3D" instance=ExtResource("1_nhupr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3499725, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
@@ -56,3 +56,12 @@ surface_material_override/0 = SubResource("StandardMaterial3D_nhupr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="player_death_region"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_dbwbs")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_wa0eo")
+volume_db = -17.087
+unit_size = 0.1
+max_db = 2.0
+autoplay = true
+
+[node name="visuals" type="Node3D" parent="."]
