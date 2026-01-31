@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlyd1f8crk50v"]
+[gd_scene format=3 uid="uid://dlyd1f8crk50v"]
 
 [ext_resource type="AudioStream" uid="uid://dxjn4y2my5gl4" path="res://assets/Audio&Sounds/dungeon-air-6983.mp3" id="1_f6gl3"]
 
