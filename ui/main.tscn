@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cioy2tg3hvxxj"]
+[gd_scene format=3 uid="uid://cioy2tg3hvxxj"]
 
 [ext_resource type="Texture2D" uid="uid://dcieuo1s0vd8q" path="res://assets/BGs/background.jpeg" id="1_uw6j2"]
 [ext_resource type="Theme" uid="uid://b3gielau1lypl" path="res://themes/labels.tres" id="2_dyfb5"]
 [ext_resource type="Theme" uid="uid://cbmfyw02a06j2" path="res://themes/iconbutton.tres" id="3_h17sc"]
 [ext_resource type="Theme" uid="uid://ddevcd6s3xtc1" path="res://themes/textbutton.tres" id="3_uw6j2"]
 [ext_resource type="Texture2D" uid="uid://c0hx5bgf2jfcs" path="res://assets/Icons/regenerate.svg" id="4_fc3ap"]
+[ext_resource type="Texture2D" uid="uid://yds6ekfjvhaj" path="res://assets/Icons/settings.svg" id="5_fc3ap"]
 
-[node name="main" type="Control"]
+[node name="main" type="Control" unique_id=2028105731]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -15,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1717901299]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -27,7 +28,7 @@ texture = ExtResource("1_uw6j2")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=797216775]
 modulate = Color(1, 1, 1, 0.298039)
 layout_mode = 1
 anchors_preset = 15
@@ -37,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.313726)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1297634918]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -54,7 +55,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="RegenerateButton" type="Button" parent="."]
+[node name="RegenerateButton" type="Button" parent="." unique_id=687801234]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.961
@@ -71,7 +72,24 @@ theme = ExtResource("3_h17sc")
 icon = ExtResource("4_fc3ap")
 icon_alignment = 1
 
-[node name="StartButton" type="Button" parent="."]
+[node name="Settings" type="Button" parent="." unique_id=1682675097]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89400005
+anchor_top = 0.07
+anchor_right = 0.89400005
+anchor_bottom = 0.07
+offset_left = -29.888062
+offset_top = -29.656002
+offset_right = 29.111938
+offset_bottom = 29.343994
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_h17sc")
+icon = ExtResource("5_fc3ap")
+icon_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=417675064]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -87,3 +105,26 @@ grow_vertical = 2
 theme = ExtResource("3_uw6j2")
 theme_override_font_sizes/font_size = 60
 text = "Start"
+
+[node name="SettingsWindowBlurBG" type="ColorRect" parent="." unique_id=2039621899]
+visible = false
+modulate = Color(0.019607844, 0.019607844, 0.019607844, 0.5176471)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SettingsWindow" type="ColorRect" parent="." unique_id=1819486844]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.313726)

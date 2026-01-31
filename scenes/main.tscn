@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmc8nb8lfnm6s"]
+[gd_scene load_steps=21 format=3 uid="uid://cmc8nb8lfnm6s"]
 
 [ext_resource type="Script" uid="uid://7pn4qm2pji2e" path="res://addons/SimpleDungeons/DungeonGenerator3D.gd" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cly22ml1tousb" path="res://scripts/main.gd" id="1_ya4ey"]
@@ -32,22 +32,22 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trceg"]
 albedo_color = Color(0, 0.40900776, 5.7756904e-07, 1)
 
-[node name="main" type="Node3D"]
+[node name="main" type="Node3D" unique_id=834527305]
 script = ExtResource("1_ya4ey")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=472454817]
 environment = SubResource("Environment_trceg")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1269297364]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="GrassLand" type="MeshInstance3D" parent="."]
+[node name="GrassLand" type="MeshInstance3D" parent="." unique_id=737074713]
 transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -5, 0)
 mesh = SubResource("PlaneMesh_eb6dy")
 surface_material_override/0 = SubResource("StandardMaterial3D_trceg")
 
-[node name="DungeonGenerator3D" type="Node3D" parent="."]
+[node name="DungeonGenerator3D" type="Node3D" parent="." unique_id=105660419]
 process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -114.38965)
 script = ExtResource("1_o5qli")
@@ -58,66 +58,66 @@ generate_seed = "2080868900"
 generate_threaded = true
 metadata/_custom_type_script = "uid://7pn4qm2pji2e"
 
-[node name="EntranceRoom" parent="DungeonGenerator3D" instance=ExtResource("2_jyhfs")]
+[node name="EntranceRoom" parent="DungeonGenerator3D" unique_id=1020233688 instance=ExtResource("2_jyhfs")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, 45)
 
-[node name="RoomsContainer" type="Node3D" parent="DungeonGenerator3D"]
+[node name="RoomsContainer" type="Node3D" parent="DungeonGenerator3D" unique_id=742030626]
 
-[node name="LivingRoom_0" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_0" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -10, 0, 5)
 
-[node name="LivingRoom_1" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_1" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 25, 0, 30)
 
-[node name="LivingRoom_2" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_2" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, -25)
 
-[node name="LivingRoom_3" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_3" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -30, 0, 35)
 
-[node name="Corridor_4" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_4" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 35)
 
-[node name="Corridor_5" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_5" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 25)
 
-[node name="Corridor_6" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_6" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 25)
 
-[node name="Corridor_7" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_7" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 15)
 
-[node name="Corridor_8" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_8" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
 
-[node name="Corridor_9" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_9" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
 
-[node name="Corridor_10" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_10" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -15)
 
-[node name="Corridor_11" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_11" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -25)
 
-[node name="Corridor_12" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_12" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 25)
 
-[node name="Corridor_13" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_13" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 35)
 
-[node name="Corridor_14" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_14" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 45)
 
-[node name="Corridor_15" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_15" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 45)
 
-[node name="Corridor_16" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_16" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 45)
 
-[node name="Corridor_17" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_17" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 35)
 
-[node name="controls" type="Container" parent="."]
+[node name="controls" type="Container" parent="." unique_id=1004909822]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -125,31 +125,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_choun")
 
-[node name="ingame" parent="controls" instance=ExtResource("6_ya4ey")]
+[node name="ingame" parent="controls" unique_id=1958445754 instance=ExtResource("6_ya4ey")]
 visible = false
 layout_mode = 2
 
-[node name="lost" parent="controls" instance=ExtResource("7_eb6dy")]
+[node name="lost" parent="controls" unique_id=49689836 instance=ExtResource("7_eb6dy")]
 visible = false
 layout_mode = 2
 
-[node name="main" parent="controls" instance=ExtResource("8_trceg")]
+[node name="main" parent="controls" unique_id=1468709340 instance=ExtResource("8_trceg")]
 layout_mode = 2
 
-[node name="paused" parent="controls" instance=ExtResource("9_a8y0u")]
+[node name="paused" parent="controls" unique_id=406111511 instance=ExtResource("9_a8y0u")]
 visible = false
 layout_mode = 2
 
-[node name="won" parent="controls" instance=ExtResource("10_jkv2x")]
+[node name="won" parent="controls" unique_id=597697651 instance=ExtResource("10_jkv2x")]
 visible = false
 layout_mode = 2
 
-[node name="mapview" type="Camera3D" parent="."]
+[node name="mapview" type="Camera3D" parent="." unique_id=49020543]
 transform = Transform3D(1, 0, 0, 0, 0.8635452, 0.50427145, 0, -0.50427145, 0.8635452, 0, 54.8196, 0)
-fov = 40.0
+fov = 70.0
 
-[node name="collector" type="Node" parent="."]
+[node name="collector" type="Node" parent="." unique_id=1255531560]
 script = ExtResource("15_jkv2x")
 
-[node name="enemy_controls" type="Node" parent="."]
+[node name="enemy_controls" type="Node" parent="." unique_id=1869623818]
 script = ExtResource("16_jbj1t")
