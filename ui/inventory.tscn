@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cun6urh5vukxs"]
+
+[ext_resource type="Script" uid="uid://0lppxjt5hp1g" path="res://scripts/inventory.gd" id="1_kosh3"]
+
+[node name="Inventory" type="PanelContainer" unique_id=827440427]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kosh3")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=585315922]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="item_grid" type="GridContainer" parent="MarginContainer" unique_id=388096265]
+layout_mode = 2
+columns = 3

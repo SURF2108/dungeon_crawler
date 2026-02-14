@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Item_data" format=3 uid="uid://divfwbm6r1fv1"]
+
+[ext_resource type="Script" uid="uid://c63fc05ms47n1" path="res://Item/Item_data.gd" id="1_50c3x"]
+[ext_resource type="PackedScene" uid="uid://cntwluk5svvth" path="res://Item/3d/axe.tscn" id="1_wsc8p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_50c3x"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-098ca7442923bf762c8d6fe37aca91c9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsc8p"]
+atlas = SubResource("CompressedTexture2D_50c3x")
+region = Rect2(32, 320, 32, 32)
+
+[resource]
+script = ExtResource("1_50c3x")
+name = "Axe"
+texture = SubResource("AtlasTexture_wsc8p")
+item_3d = ExtResource("1_wsc8p")
+metadata/_custom_type_script = "uid://c63fc05ms47n1"

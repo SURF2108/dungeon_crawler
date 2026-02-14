@@ -4,6 +4,17 @@ class_name game
 var player_scene = preload("res://characters/player.tscn")
 var enemy_scene = preload("res://characters/enemy.tscn")
 
+#inventory
+
+
+
+
+
+
+
+
+#-----------------------------
+
 @onready var control = controls.new()
 @onready var collect = collector.new()
 @onready var _enemy = enemy_control.new()
@@ -20,8 +31,13 @@ var keys_collected = 0
 var message = ""
 
 # Called when the node enters the scene tree for the first time.
+
+var player
 func _ready() -> void:
 	print("Main ready working")
+	
+	#inventory
+
 	#map.connect("done_generating",_access_the_rooms)
 	
 
@@ -30,7 +46,7 @@ func _process(delta: float) -> void:
 	pass
 	
 
-var player
+
 func spawn_player():
 	if player and is_instance_valid(player): return
 	var spawn_points = get_tree().get_nodes_in_group("player_spawn_point")

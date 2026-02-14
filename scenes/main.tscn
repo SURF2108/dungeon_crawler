@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmc8nb8lfnm6s"]
+[gd_scene format=3 uid="uid://cmc8nb8lfnm6s"]
 
 [ext_resource type="Script" uid="uid://7pn4qm2pji2e" path="res://addons/SimpleDungeons/DungeonGenerator3D.gd" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cly22ml1tousb" path="res://scripts/main.gd" id="1_ya4ey"]
@@ -63,58 +63,58 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0
 
 [node name="RoomsContainer" type="Node3D" parent="DungeonGenerator3D" unique_id=742030626]
 
-[node name="LivingRoom_0" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_0" parent="DungeonGenerator3D/RoomsContainer" unique_id=1667182096 instance=ExtResource("3_tbgi4")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -10, 0, 5)
 
-[node name="LivingRoom_1" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_1" parent="DungeonGenerator3D/RoomsContainer" unique_id=964126002 instance=ExtResource("3_tbgi4")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 25, 0, 30)
 
-[node name="LivingRoom_2" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_2" parent="DungeonGenerator3D/RoomsContainer" unique_id=493617515 instance=ExtResource("3_tbgi4")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20, 0, -25)
 
-[node name="LivingRoom_3" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("3_tbgi4")]
+[node name="LivingRoom_3" parent="DungeonGenerator3D/RoomsContainer" unique_id=1662829428 instance=ExtResource("3_tbgi4")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -30, 0, 35)
 
-[node name="Corridor_4" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_4" parent="DungeonGenerator3D/RoomsContainer" unique_id=1278533924 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 35)
 
-[node name="Corridor_5" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_5" parent="DungeonGenerator3D/RoomsContainer" unique_id=1706470648 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 25)
 
-[node name="Corridor_6" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_6" parent="DungeonGenerator3D/RoomsContainer" unique_id=412141316 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 25)
 
-[node name="Corridor_7" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_7" parent="DungeonGenerator3D/RoomsContainer" unique_id=2067440664 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 15)
 
-[node name="Corridor_8" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_8" parent="DungeonGenerator3D/RoomsContainer" unique_id=896659763 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
 
-[node name="Corridor_9" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_9" parent="DungeonGenerator3D/RoomsContainer" unique_id=1831760279 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
 
-[node name="Corridor_10" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_10" parent="DungeonGenerator3D/RoomsContainer" unique_id=1332625394 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -15)
 
-[node name="Corridor_11" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_11" parent="DungeonGenerator3D/RoomsContainer" unique_id=1515634325 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -25)
 
-[node name="Corridor_12" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_12" parent="DungeonGenerator3D/RoomsContainer" unique_id=94043414 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 25)
 
-[node name="Corridor_13" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_13" parent="DungeonGenerator3D/RoomsContainer" unique_id=1106249727 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 35)
 
-[node name="Corridor_14" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_14" parent="DungeonGenerator3D/RoomsContainer" unique_id=1084269068 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 45)
 
-[node name="Corridor_15" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_15" parent="DungeonGenerator3D/RoomsContainer" unique_id=1855033538 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 45)
 
-[node name="Corridor_16" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_16" parent="DungeonGenerator3D/RoomsContainer" unique_id=889361415 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 45)
 
-[node name="Corridor_17" type="Node3D" parent="DungeonGenerator3D/RoomsContainer" instance=ExtResource("4_tefeu")]
+[node name="Corridor_17" parent="DungeonGenerator3D/RoomsContainer" unique_id=204842841 instance=ExtResource("4_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 35)
 
 [node name="controls" type="Container" parent="." unique_id=1004909822]

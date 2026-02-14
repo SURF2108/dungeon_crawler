@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://byr7jeq3oc7ol"]
+[gd_scene format=3 uid="uid://byr7jeq3oc7ol"]
+
+[ext_resource type="Resource" uid="uid://c8koicaqhyopu" path="res://Inventory/test_inv.tres" id="1_dnjla"]
+[ext_resource type="PackedScene" uid="uid://c0y47kbuqd0t5" path="res://ui/Inventory_player.tscn" id="2_3eadt"]
 
 [sub_resource type="GDScript" id="GDScript_6p3mc"]
 script/source = "# ProtoController v1.0 by Brackeys
@@ -7,6 +10,10 @@ script/source = "# ProtoController v1.0 by Brackeys
 # Happy prototyping!
 
 extends CharacterBody3D
+
+#inventory
+@export var Inventory: Inventory_data
+@onready var inv_ui: CanvasLayer = $inv_ui
 
 ## Can we move around?
 @export var can_move : bool = true
@@ -57,6 +64,8 @@ var freeflying : bool = false
 @onready var collider: CollisionShape3D = $Collider
 
 func _ready() -> void:
+	inv_ui.visible=false
+	inv_ui.get_node(\"Inventory_interface\").set_player_inventory_data(Inventory) # tarun here
 	
 	check_input_mappings()
 	look_rotation.y = rotation.y
@@ -64,6 +73,12 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
+	if Input.is_action_just_pressed(\"inventory\") and inv_ui.visible==false:
+		inv_ui.visible=true
+		release_mouse()
+	elif Input.is_action_just_pressed(\"inventory\") and inv_ui.visible==true:
+		inv_ui.visible=false
+		capture_mouse()
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
@@ -196,23 +211,27 @@ albedo_color = Color(0.9942247, 0.4149807, 0.1903475, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dnjla"]
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D" unique_id=505854036 groups=["player"]]
 process_mode = 1
 transform = Transform3D(1.9999465, 0, 0.014625895, 0, 2, 0, -0.014625895, 0, 1.9999465, 0, 0, 0)
 script = SubResource("GDScript_6p3mc")
+Inventory = ExtResource("1_dnjla")
 
-[node name="mesh" type="MeshInstance3D" parent="."]
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=308081718]
 mesh = SubResource("CapsuleMesh_6p3mc")
 surface_material_override/0 = SubResource("StandardMaterial3D_6p3mc")
 
-[node name="Collider" type="CollisionShape3D" parent="."]
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=2023560442]
 shape = SubResource("CapsuleShape3D_dnjla")
 
-[node name="Head" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="." unique_id=135819644]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.6738081, 0)
 
-[node name="playerview" type="Camera3D" parent="Head"]
+[node name="playerview" type="Camera3D" parent="Head" unique_id=989140843]
 unique_name_in_owner = true
 transform = Transform3D(0.5000001, 0, -4.656613e-10, 0, 0.5, 0, 4.656613e-10, 0, 0.5000001, 0, 0.76232636, 0)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Head"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Head" unique_id=400220725]
+
+[node name="inv_ui" parent="." unique_id=882173261 instance=ExtResource("2_3eadt")]
+visible = true

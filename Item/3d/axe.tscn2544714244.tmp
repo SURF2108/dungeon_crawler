@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cntwluk5svvth"]
+
+[ext_resource type="Script" uid="uid://maqiwv1fwgxe" path="res://Item/3d/axe.gd" id="1_h43py"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f2rhi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h43py"]
+albedo_color = Color(1, 1, 0.42352942, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c5s0u"]
+radius = 1.0
+
+[node name="axe" type="Node3D" unique_id=1237084114]
+script = ExtResource("1_h43py")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1011421254]
+transform = Transform3D(0.28575307, 0, 0, 0, 0.73909587, 0, 0, 0, 0.35211408, 0.070683, 0, 0)
+mesh = SubResource("CapsuleMesh_f2rhi")
+surface_material_override/0 = SubResource("StandardMaterial3D_h43py")
+
+[node name="Area" type="Area3D" parent="MeshInstance3D" unique_id=614439158]
+transform = Transform3D(4.9672685, 0, 0, 0, 1.3530043, 0, 0, 0, 2.8399885, -0.24735692, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area" unique_id=153671076]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.7, 0, 0, 0)
+shape = SubResource("SphereShape3D_c5s0u")
+
+[connection signal="body_shape_entered" from="MeshInstance3D/Area" to="." method="_on_area_body_shape_entered"]
+[connection signal="body_shape_exited" from="MeshInstance3D/Area" to="." method="_on_area_body_shape_exited"]

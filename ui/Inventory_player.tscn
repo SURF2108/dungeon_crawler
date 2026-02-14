@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c0y47kbuqd0t5"]
+
+[ext_resource type="PackedScene" uid="uid://cun6urh5vukxs" path="res://ui/inventory.tscn" id="1_obkw5"]
+[ext_resource type="Script" uid="uid://dxgoeimesb8ye" path="res://ui/inventory_interface.gd" id="1_tww3k"]
+[ext_resource type="PackedScene" uid="uid://03vakfdtiqjk" path="res://ui/slot.tscn" id="3_4j0i3"]
+
+[node name="UI" type="CanvasLayer" unique_id=882173261]
+visible = false
+
+[node name="Inventory_interface" type="Control" parent="." unique_id=1774478150]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tww3k")
+
+[node name="Player_inventory" parent="Inventory_interface" unique_id=827440427 instance=ExtResource("1_obkw5")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="grabbed_Slot" parent="Inventory_interface" unique_id=658701258 instance=ExtResource("3_4j0i3")]
+visible = false
+modulate = Color(1, 1, 1, 0.5372549)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://cgxvbcs150qbh"]
+[gd_scene format=4 uid="uid://cgxvbcs150qbh"]
 
 [ext_resource type="Script" uid="uid://cqeb6jsje58xi" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_dqf1h"]
+[ext_resource type="PackedScene" uid="uid://cntwluk5svvth" path="res://Item/3d/axe.tscn" id="2_kyj2t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_upkxj"]
 resource_name = "dark grey"
@@ -445,178 +446,181 @@ shadow_mesh = SubResource("ArrayMesh_4v2wr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dqf1h"]
 
-[node name="EntranceRoom" type="Node3D"]
+[node name="EntranceRoom" type="Node3D" unique_id=1081048806]
 script = ExtResource("1_dqf1h")
 min_count = 1
 max_count = 1
 metadata/_custom_type_script = "uid://cqeb6jsje58xi"
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=630862266]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.44248e-06, 4.76837e-07, 0)
 visible = false
 use_collision = true
 size = Vector3(10, 10, 10)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D" unique_id=1548732641]
 operation = 2
 size = Vector3(9.5, 9.5, 9.5)
 
-[node name="DOOR_F_CUT" type="CSGBox3D" parent="CSGBox3D"]
+[node name="DOOR_F_CUT" type="CSGBox3D" parent="CSGBox3D" unique_id=692125882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.75, -5)
 operation = 2
 size = Vector3(2, 4, 1)
 
-[node name="DOOR_R_CUT" type="CSGBox3D" parent="CSGBox3D"]
+[node name="DOOR_R_CUT" type="CSGBox3D" parent="CSGBox3D" unique_id=1816604460]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, -2.75, 0)
 operation = 2
 size = Vector3(2, 4, 1)
 
-[node name="DOOR_L_CUT" type="CSGBox3D" parent="CSGBox3D"]
+[node name="DOOR_L_CUT" type="CSGBox3D" parent="CSGBox3D" unique_id=1784002931]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, -2.75, 0)
 operation = 2
 size = Vector3(2, 4, 1)
 
-[node name="Models" type="Node3D" parent="."]
+[node name="Models" type="Node3D" parent="." unique_id=26753220]
 
-[node name="brick wall with door" type="MeshInstance3D" parent="Models"]
+[node name="brick wall with door" type="MeshInstance3D" parent="Models" unique_id=1057256926]
 transform = Transform3D(1.52595, 0, 0, 0, 1.52595, 0, 0, 0, 1.52595, -4.78709, -4.75978, -4.24169)
 mesh = SubResource("ArrayMesh_dqf1h")
 skeleton = NodePath("")
 
-[node name="door_003" type="MeshInstance3D" parent="Models/brick wall with door"]
+[node name="door_003" type="MeshInstance3D" parent="Models/brick wall with door" unique_id=1810202430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12793, 1.27101, 0.0374012)
 mesh = SubResource("ArrayMesh_kyj2t")
 skeleton = NodePath("")
 
-[node name="brick wall without door" type="MeshInstance3D" parent="Models"]
+[node name="brick wall without door" type="MeshInstance3D" parent="Models" unique_id=1580994363]
 transform = Transform3D(-6.74653e-08, 0, 1.78278, 0, 1.78278, 0, -1.54342, 0, -7.79279e-08, -4.65039, -4.98136, 4.82409)
 mesh = SubResource("ArrayMesh_gwij1")
 skeleton = NodePath("")
 
-[node name="brick wall without door2" type="MeshInstance3D" parent="Models"]
+[node name="brick wall without door2" type="MeshInstance3D" parent="Models" unique_id=1791997168]
 transform = Transform3D(1.50465, 0, 0, 0, 1.78278, 0, 0, 0, 1.78278, -4.73092, -4.98138, 4.72633)
 mesh = SubResource("ArrayMesh_gwij1")
 skeleton = NodePath("")
 
-[node name="brick wall without door3" type="MeshInstance3D" parent="Models"]
+[node name="brick wall without door3" type="MeshInstance3D" parent="Models" unique_id=1575892195]
 transform = Transform3D(-6.74653e-08, 0, 1.78278, 0, 1.78278, 0, -1.54342, 0, -7.79279e-08, 4.7552, -4.98139, 4.82948)
 mesh = SubResource("ArrayMesh_gwij1")
 skeleton = NodePath("")
 
-[node name="floor_001" type="MeshInstance3D" parent="Models"]
+[node name="floor_001" type="MeshInstance3D" parent="Models" unique_id=621684205]
 transform = Transform3D(2.52998, 0, 0, 0, 2.52998, 0, 0, 0, 2.52998, -4.96635, -4.75967, 0.133896)
 mesh = SubResource("ArrayMesh_nkew7")
 skeleton = NodePath("")
 
-[node name="floor_002" type="MeshInstance3D" parent="Models/floor_001"]
+[node name="floor_002" type="MeshInstance3D" parent="Models/floor_001" unique_id=724899782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0239)
 mesh = SubResource("ArrayMesh_nkew7")
 skeleton = NodePath("")
 
-[node name="floor_002" type="MeshInstance3D" parent="Models"]
+[node name="floor_002" type="MeshInstance3D" parent="Models" unique_id=2047212003]
 transform = Transform3D(2.52998, 0, 0, 0, 2.52998, 0, 0, 0, 2.52998, 0.0978458, -4.75967, 0.133896)
 mesh = SubResource("ArrayMesh_nkew7")
 skeleton = NodePath("")
 
-[node name="floor_002" type="MeshInstance3D" parent="Models/floor_002"]
+[node name="floor_002" type="MeshInstance3D" parent="Models/floor_002" unique_id=1455315533]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.0239)
 mesh = SubResource("ArrayMesh_nkew7")
 skeleton = NodePath("")
 
-[node name="Roof" type="Node3D" parent="Models"]
+[node name="Roof" type="Node3D" parent="Models" unique_id=1447089389]
 transform = Transform3D(1.42337, 0, 0, 0, 1.42337, 0, 0, 0, 1.42337, -1.32895, -0.103143, -1.25574)
 
-[node name="floor_331" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_331" type="MeshInstance3D" parent="Models/Roof" unique_id=123441666]
 transform = Transform3D(3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, 4.09141, 2.00266, -0.177156)
 mesh = SubResource("ArrayMesh_x40h8")
 skeleton = NodePath("")
 
-[node name="floor_332" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_332" type="MeshInstance3D" parent="Models/Roof" unique_id=1943075729]
 transform = Transform3D(1.78814e-07, 0, 1, 0, 1, 0, -1, 0, 1.78814e-07, -2.22748, 2.00266, 1.92644)
 mesh = SubResource("ArrayMesh_x40h8")
 skeleton = NodePath("")
 
-[node name="floor_335" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_335" type="MeshInstance3D" parent="Models/Roof" unique_id=1794439002]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122428, 2.00178, 4.03404)
 mesh = SubResource("ArrayMesh_7yg2o")
 skeleton = NodePath("")
 
-[node name="floor_336" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_336" type="MeshInstance3D" parent="Models/Roof" unique_id=197987890]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119828, 2.00266, -2.28486)
 mesh = SubResource("ArrayMesh_x40h8")
 skeleton = NodePath("")
 
-[node name="floor_338" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_338" type="MeshInstance3D" parent="Models/Roof" unique_id=136179197]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1.98371, 2.00266, 4.03404)
 mesh = SubResource("ArrayMesh_x40h8")
 skeleton = NodePath("")
 
-[node name="floor_341" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_341" type="MeshInstance3D" parent="Models/Roof" unique_id=1084965331]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 1.98631, 2, -2.28486)
 mesh = SubResource("ArrayMesh_i2547")
 skeleton = NodePath("")
 
-[node name="floor_349" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_349" type="MeshInstance3D" parent="Models/Roof" unique_id=1198518480]
 transform = Transform3D(3.57628e-07, 0, 1, 0, 1, 0, -1, 0, 3.57628e-07, 4.09141, 2, 1.92904)
 mesh = SubResource("ArrayMesh_7yg2o")
 skeleton = NodePath("")
 
-[node name="floor_364" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_364" type="MeshInstance3D" parent="Models/Roof" unique_id=954460246]
 transform = Transform3D(3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, -2.22748, 2, -0.179756)
 mesh = SubResource("ArrayMesh_i2547")
 skeleton = NodePath("")
 
-[node name="floor_365" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_365" type="MeshInstance3D" parent="Models/Roof" unique_id=79833242]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22748, 2, -0.179756)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_366" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_366" type="MeshInstance3D" parent="Models/Roof" unique_id=1992784376]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22748, 2.00266, -2.28486)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_367" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_367" type="MeshInstance3D" parent="Models/Roof" unique_id=882515473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22748, 2, 1.92644)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_368" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_368" type="MeshInstance3D" parent="Models/Roof" unique_id=925892257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119828, 2, -0.179756)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_369" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_369" type="MeshInstance3D" parent="Models/Roof" unique_id=120537821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119828, 2.00266, -2.28486)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_370" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_370" type="MeshInstance3D" parent="Models/Roof" unique_id=1709152430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119828, 2, 1.92644)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_371" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_371" type="MeshInstance3D" parent="Models/Roof" unique_id=1886259841]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98631, 2, -0.179756)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_372" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_372" type="MeshInstance3D" parent="Models/Roof" unique_id=1261348430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98631, 2.00266, -2.28486)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="floor_373" type="MeshInstance3D" parent="Models/Roof"]
+[node name="floor_373" type="MeshInstance3D" parent="Models/Roof" unique_id=502898377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98631, 2, 1.92644)
 mesh = SubResource("ArrayMesh_jxfl1")
 skeleton = NodePath("")
 
-[node name="PlayerSpawnPoint" type="Node3D" parent="." groups=["player_spawn_point"]]
+[node name="PlayerSpawnPoint" type="Node3D" parent="." unique_id=65192288 groups=["player_spawn_point"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8866961, 0)
 
-[node name="exit_region" type="Area3D" parent="."]
+[node name="exit_region" type="Area3D" parent="." unique_id=1277274561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.7290022, -4.4139442)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="exit_region"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="exit_region" unique_id=305994085]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.576725, -0.3257079)
 shape = SubResource("BoxShape3D_dqf1h")
+
+[node name="axe" parent="." unique_id=1237084114 instance=ExtResource("2_kyj2t")]
+transform = Transform3D(1, 0, 0, 0, 0.9, 0, 0, 0, 1, 0, -4, 0)

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item_data" format=3 uid="uid://dhnll16pgtva5"]
+
+[ext_resource type="Script" uid="uid://c63fc05ms47n1" path="res://Item/Item_data.gd" id="1_lq33x"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kxyo1"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-098ca7442923bf762c8d6fe37aca91c9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq33x"]
+atlas = SubResource("CompressedTexture2D_kxyo1")
+region = Rect2(0, 448, 32, 32)
+
+[resource]
+script = ExtResource("1_lq33x")
+name = "Apple"
+stakable = true
+texture = SubResource("AtlasTexture_lq33x")
+metadata/_custom_type_script = "uid://c63fc05ms47n1"
